@@ -1,0 +1,48 @@
+{{ block title }}
+
+<h2><strong>Pregunta N°1</strong></h2>
+
+<br>
+
+{{endblock  }}
+
+{{ block content }}
+
+<style>
+.mensaje-exito {
+    background-color: #d4edda;  /* Fondo verde claro */
+    color: #155724;  /* Texto verde oscuro */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;  /* Borde verde claro */
+}
+</style>
+<div id="mensaje">
+</div>
+
+
+<p style="font-size: 24px"; align="justify">¿Cuánto es el pago extra que puede obtener en esta sesión?</p>
+
+
+
+    {{ if player.intentos_fallidos1 >= 2 }}
+
+    <p>Por favor levante su mano y espere a que el experimento continúe.</p>
+    <div>
+        {{formfield 'password_input1'}}
+    </div>
+
+    {{ else }}
+
+    {{formfield 'comprension1'}}
+
+    
+    {{ endif }}
+
+
+{{next_button}}
+
+
+
+
+{{ endblock }}

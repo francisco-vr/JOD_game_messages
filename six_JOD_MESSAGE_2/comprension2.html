@@ -1,0 +1,40 @@
+{{ block title }}
+
+<h2><strong>Pregunta N°2</strong></h2>
+
+{{endblock  }}
+
+
+{{ block content }}
+
+<p style="font-size: 24px"; align="justify">'Durante el juego de la destrucción: ¿Qué información podrán ver los seguidores?'</p>
+
+
+<p style="font-size: 24px"; align="justify"><ol type="I">
+    <li>Cuánto destruyó tu propio lider</li>
+    <li>Cuánto te ha destruído tu pareja de juego</li>
+    <li>Un mensaje que te envía tu lider</li>
+    <li>Puede ser todo lo anterior, pero depende de la ronda</li>
+  </ol></p>
+
+
+
+    {{ if player.intentos_fallidos2 >= 2 }}
+
+    <p>Por favor levante su mano y espere a que el experimento continúe.</p>
+    <div>
+        {{formfield 'password_input2'}}
+    </div>
+
+    {{ else }}
+
+    {{formfield 'comprension2'}}
+
+    
+    {{ endif }}
+
+
+{{ next_button }}
+
+
+{{ endblock }}

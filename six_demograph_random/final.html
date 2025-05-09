@@ -1,0 +1,43 @@
+{{ block title }}
+<h1><strong>El estudio ha finalizado</strong></h1>
+{{ endblock }}
+
+{{ block content }}
+
+<br>
+
+<p style="font-size: 24px;" align="justify">Muchas gracias por tu participación.</p>
+
+<h2>Tu pago total es: <strong>${{ player.payoff }}</strong></h2>
+
+<br>
+
+<p style="font-size: 20px;" align="justify">
+    Se seleccionó aleatoriamente la ronda <strong>{{ participant.selected_jod_round }}</strong> del <em>Juego de la Destrucción</em>, 
+    donde ganaste <strong>${{ participant.selected_jod_value }}</strong>.
+</p>
+
+<p style="font-size: 20px;" align="justify">
+    También se seleccionó la pregunta <strong>{{ participant.selected_norm_question }}</strong> 
+    de la ronda <strong>{{ participant.selected_norm_round }}</strong> en la actividad de normas, 
+    y tu respuesta fue un <strong>
+        {{ if participant.selected_norm_value == 1 }}
+
+        acierto
+
+        {{ else }}
+
+        error (no pudiste predecir la respuesta de la mayoría de tu grupo)
+
+        {{ endif }}
+    </strong>.
+</p>
+
+<br>
+
+<p style="font-size: 24px;" align="justify">
+    Los asistentes de sala te entregarán tu dinero en los próximos minutos.
+</p>
+
+{{ endblock }}
+

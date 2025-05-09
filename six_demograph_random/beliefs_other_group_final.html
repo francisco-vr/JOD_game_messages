@@ -1,0 +1,32 @@
+
+
+{{ block content }}
+
+<p style="font-size: 24px;" align="justify">
+    <strong>Ahora piensa en el otro equipo</strong>, e indica tus creencias sobre las decisiones de destrucción del otro grupo.
+</p>
+
+<table style="width: 100%; font-size: 20px;">
+    <tr>
+        <td style="width: 70%; text-align: left;">
+            {{ form.beliefs_other_leader_final.label }}
+        </td>
+        <td style="width: 30%; text-align: right;">
+            {{ form.beliefs_other_leader_final }}
+        </td>
+    </tr>
+    <tr><td colspan="2"><br></td></tr>
+    <tr>
+        <td style="text-align: left;">
+            {{ form.beliefs_other_followers_final.label }}
+        </td>
+        <td style="text-align: right;">
+            {{ form.beliefs_other_followers_final }}
+        </td>
+    </tr>
+</table>
+
+<br>
+{{ next_button }}
+
+{{ endblock }}

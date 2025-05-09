@@ -1,0 +1,30 @@
+{{ block title }}
+{{endblock  }}
+
+{{ block content }}
+
+
+<div class="mensaje-exito">
+    {{ if player.intentos_fallidos4 <= 2 }}
+    <p style="font-size: 24px; color:darkgreen"; align="justify"><strong>¡Correcto!</strong></p>
+    {{ else }}
+    <p style="font-size: 24px; color:darkgreen"; align="justify"><strong>Recuerde</strong></p>
+    {{ endif }}
+    <br>
+    <p style="font-size: 24px; "; align="justify"></strong> Recuerde que es un pago que suma:
+        
+        <li>
+         Pago base ($5.000)
+        </li>
+        <li>
+        Pago de ronda al azar de juego de la destrucción, que es el resto que queda después de la decisión de destrucción ($6.000 - $500 de destrucción)
+        </li>
+        <li>Pago por tarea de predicción, si logras predecir lo que la mayoría de tu grupo cree en la tarea de predicción (en este caso $0)</p></li>
+</div>
+
+<br>
+
+{{ next_button }}
+
+
+{{ endblock }}

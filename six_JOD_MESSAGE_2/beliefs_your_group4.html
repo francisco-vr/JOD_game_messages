@@ -1,0 +1,48 @@
+
+
+{{ block content }}
+
+<style>
+input[type="text"] {
+    background-color: #fef7dc;
+    border: 2px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    width: 100px;
+    font-size: 16px;
+}
+</style>
+
+<p style="font-size: 24px;" align="justify">
+    <strong>Piensa en tu propio equipo</strong> e indica tus creencias sobre las decisiones de destrucción.
+</p>
+
+<table style="width: 100%; font-size: 20px;">
+    <tr>
+        {{ if player.participant.group_role2 == 'seguidor' }}
+
+        <td style="width: 70%; text-align: left;">
+            {{ form.beliefs_your_leader4.label }}
+        </td>
+        <td style="width: 30%; text-align: right;">
+            {{ form.beliefs_your_leader4 }}<br>
+            <small style="font-size: 13px; color: #555;"><center>(Debe poner una cifra entre 0 y 6000)</center></small>
+        </td>
+        {{ endif }}
+    </tr>
+    <tr><td colspan="2"><br></td></tr>
+    <tr>
+        <td style="text-align: left;">
+            {{ form.beliefs_your_group4.label }}
+        </td>
+        <td style="text-align: right;">
+            {{ form.beliefs_your_group4 }}<br>
+            <small style="font-size: 13px; color: #555;"><center>(Debe poner una cifra entre 0 y 6000)</center></small>
+        </td>
+    </tr>
+</table>
+
+<br>
+{{ next_button }}
+
+{{ endblock }}

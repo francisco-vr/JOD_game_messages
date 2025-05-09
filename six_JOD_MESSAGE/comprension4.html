@@ -1,0 +1,66 @@
+{{ block title }}
+
+<h2><strong>Pregunta N°4</strong></h2>
+
+{{endblock  }}
+
+
+{{ block content }}
+
+<p style="font-size: 24px;" align="justify">Por favor considere la situación del ejemplo:</p>
+
+<table style="
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+">
+    <thead>
+        <tr>
+            <th style="border: 1px solid black; padding: 8px;">Motivo de pago</th>
+            <th style="border: 1px solid black; padding: 8px;">Ronda elegida al azar</th>
+            <th style="border: 1px solid black; padding: 8px;">Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px;">Pago base</td>
+            <td style="border: 1px solid black; padding: 8px;">--</td>
+            <td style="border: 1px solid black; padding: 8px;">$5.000</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px;">Juego de destrucción</td>
+            <td style="border: 1px solid black; padding: 8px;">Ronda 15</td>
+            <td style="border: 1px solid black; padding: 8px;">Le destruyeron $500</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px;">Tarea de predicción</td>
+            <td style="border: 1px solid black; padding: 8px;">Ronda intermedia, acción 1</td>
+            <td style="border: 1px solid black; padding: 8px;">Respondió distinto al 70% de su grupo</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<p style="font-size: 24px"; align="justify">Siguiendo la información del ejemplo: ¿Cuál es su pago final total? (incluyendo el pago base)</p>
+
+{{ if player.intentos_fallidos4 >= 2 }}
+
+<p>Por favor levante su mano y espere a que el experimento continúe.</p>
+<div>
+    {{formfield 'password_input4'}}
+</div>
+
+{{ else }}
+
+{{formfield 'comprension4'}}
+
+
+{{ endif }}
+
+{{next_button}}
+
+
+
+{{ endblock }}

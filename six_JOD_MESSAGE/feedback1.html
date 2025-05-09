@@ -1,0 +1,22 @@
+{{ block title }}
+{{endblock  }}
+
+{{ block content }}
+
+
+<div class="mensaje-exito">
+    {{ if player.intentos_fallidos1 <= 2 }}
+    <p style="font-size: 24px; color:darkgreen"; align="justify"><strong>¡Correcto!</strong></p>
+    {{ else }}
+    <p style="font-size: 24px; color:darkgreen"; align="justify"><strong>Recuerde</strong></p>
+    {{ endif }}
+    <br>
+    <p style="font-size: 24px"; align="justify">Se podrá ganar hasta $6.000 en el juego de la destrucción, y $1.000 en la tarea de predicción</p>
+
+</div>
+
+
+{{ next_button }}
+
+
+{{ endblock }}

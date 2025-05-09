@@ -1,0 +1,40 @@
+{{ block title }}
+<h1 style="font-size: 34px;"><strong>Tu grupo</strong></h1>
+{{ endblock }}
+
+{{ block content }}
+
+
+<p style="font-size: 24px;" align="justify">
+    <strong>Piensa en tu propio equipo</strong> e indica tus creencias sobre las decisiones de destrucción dentro de tu equipo.
+</p>
+
+{{ if player.participant.group_role == 'seguidor'}}
+<table style="width: 100%; font-size: 20px;">
+    <tr>
+        <td style="width: 70%; text-align: left;">
+            {{ form.beliefs_your_leader_final.label }}
+        </td>
+        <td style="width: 30%; text-align: right;">
+            {{ form.beliefs_your_leader_final }}
+        </td>
+    </tr>
+    <tr><td colspan="2"><br></td></tr>
+
+    {{ endif }}
+    <tr>
+        <td style="text-align: left;">
+            {{ form.beliefs_your_group_final.label }}
+        </td>
+        <td style="text-align: right;">
+            {{ form.beliefs_your_group_final }}
+        </td>
+    </tr>
+</table>
+
+
+
+<br>
+{{ next_button }}
+
+{{ endblock }}

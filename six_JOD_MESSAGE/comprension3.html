@@ -1,0 +1,31 @@
+{{ block title }}
+
+<h2><strong>Pregunta N°3</strong></h2>
+
+{{endblock  }}
+
+
+{{ block content }}
+
+
+<p style="font-size: 24px"; align="justify"></strong>¿Cuántas rondas del juego de la destrucción se pagarán en este estudio?</p>
+
+
+    {{ if player.intentos_fallidos3 >= 2 }}
+
+    <p>Por favor levante su mano y espere a que el experimento continúe.</p>
+    <div>
+        {{formfield 'password_input3'}}
+    </div>
+
+    {{ else }}
+
+    {{formfield 'comprension3'}}
+
+    
+    {{ endif }}
+
+{{ next_button }}
+
+
+{{ endblock }}
